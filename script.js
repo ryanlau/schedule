@@ -34,8 +34,8 @@ function startclock15() {
         i.style.display = "none";
     };
 
-    gettime(15);
-    setInterval(gettime(15), 1000);
+    gettime(0);
+    setInterval(gettime(0), 1000);
 }
 
 function startclock610() {
@@ -45,7 +45,35 @@ function startclock610() {
         i.style.display = "none";
     };
 
-    gettime(610);
+    gettime(5);
 
-    setInterval(gettime(610), 1000);
+    setInterval(gettime(5), 1000);
+}
+
+function displaytime() {
+    var d = new Date();
+    console.log('hi')
+    hour = d.getHours()
+    minutes = d.getMinutes()
+    seconds = d.getSeconds()
+    day = d.getDay()
+
+    document.getElementById("clock").innerHTML = hour + ":" + minutes + ":" + seconds;
+    clockloop = setTimeout(displaytime, 1000)
+}
+
+function hide() {
+    var time = document.getElementById("time");
+    time.style.display = "none"
+    var clock = document.getElementById("clock");
+    clock.style.display = ""
+    displaytime();
+}
+
+function show() {
+    var time = document.getElementById("time");
+    time.style.display = ""
+    var clock = document.getElementById("clock");
+    clock.style.display = "none"
+    clearTimeout(clockloop);
 }
