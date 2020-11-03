@@ -26,6 +26,7 @@ p {
     color: #F7B801;
     font-family: 'Lexend Deca', sans-serif;
     font-size: 36px;
+    cursor: default;
 }
 
 button {
@@ -38,10 +39,19 @@ button {
     border-radius: 18px;
 }
 
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;;
+}
+
 h3 {
     font-family: 'Lexend Deca', sans-serif;
     font-size: 15px;
     color: #F7B801;
+    cursor: default;
 }
 
 a:link, a:visited { 
@@ -55,4 +65,24 @@ a:link, a:visited {
   left: 0;
   width: 100%;
   text-align: center;
+  cursor: default;
+}
+
+/* https://stackoverflow.com/questions/11660710/css-transition-fade-in#39669911 */
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

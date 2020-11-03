@@ -1,2 +1,2 @@
 # s
-inspired by: http://bert.stuy.edu/pbrooks/schedules/schedules.py
+Visit the site here: https://rynlu.me/s

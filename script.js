@@ -8,15 +8,21 @@ function gettime(x) {
 
     switch(day) {
         case 0:
-            document.getElementById("time").innerHTML = "It's a weekend... go back to sleep.";
+            document.getElementById("time").innerHTML = "It's the weekend... go back to sleep.";
             break;
         case 6:
-            document.getElementById("time").innerHTML = "It's a weekend... go back to sleep.";
+            document.getElementById("time").innerHTML = "It's the weekend... go back to sleep.";
             break;
         default:
             switch(0 < hour < 8 || 3 < hour < 23) {
                 case true:
                     document.getElementById("time").innerHTML = "Classes over.";
+                default:
+                    if (hour == 9 && minutes >= 10) {
+                        document.getElementById("time").innerHTML = (60 - minutes + 5) + "minutes left in period " + (x + 1);
+                    } else if (hour == 10 && minutes <= 5) {
+                        document.getElementById("time").innerHTML = (5 - minutes) + "minutes left in period " + (x + 1);
+                    }
             }
     }
 }
