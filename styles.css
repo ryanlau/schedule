@@ -1,0 +1,58 @@
+.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    background: #2A2B2A;
+}
+
+#time {
+    margin: 0;
+}
+
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+p {
+    margin: 0;
+    color: #F7B801;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 36px;
+}
+
+button {
+    margin: 0;
+    background-color: #F7B801;
+    color: #2A2B2A;
+    font-size: 36px;
+    font-family: 'Lexend Deca', sans-serif;
+    border: none;
+    border-radius: 18px;
+}
+
+h3 {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    color: #F7B801;
+}
+
+a:link, a:visited { 
+    color: #F7B801;
+    text-decoration: none;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
