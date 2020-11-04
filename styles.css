@@ -88,6 +88,12 @@ a:hover {
   cursor: default;
 }
 
+@media screen and (max-height: 170px) {
+    .bottom {
+        display: none;
+    }
+}
+
 /* https://stackoverflow.com/questions/11660710/css-transition-fade-in#39669911 */
 
 .fade-in {
