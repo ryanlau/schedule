@@ -56,16 +56,16 @@ function gettime() {
 
     } else if (hour == 11) {
         document.getElementById("time").innerHTML = (75 - minutes) + " minutes left in period " + (window.whichDay + 3);
-    } else if (hour = 12 && minutes == 14 && seconds == 59) {
+    } else if (hour == 12 && minutes == 14 && seconds == 59) {
         document.getElementById("time").innerHTML = (60 - seconds) + " second left in period " + (window.whichDay + 3);
-    } else if (hour = 12 && minutes == 14) {
+    } else if (hour == 12 && minutes == 14) {
         document.getElementById("time").innerHTML = (60 - seconds) + " seconds left in period " + (window.whichDay + 3);
-    } else if (hour = 12 && minutes < 15) {
+    } else if (hour == 12 && minutes < 15) {
         document.getElementById("time").innerHTML = (15 - minutes) + " minutes left in period " + (window.whichDay + 3);
     
-    } else if (hour = 12 && minutes == 24 && seconds == 59) {
+    } else if (hour == 12 && minutes == 24 && seconds == 59) {
         document.getElementById("time").innerHTML = (60 - seconds) + " second until period " + (window.whichDay + 4);
-    } else if (hour = 12 && minutes == 24) {
+    } else if (hour == 12 && minutes == 24) {
         document.getElementById("time").innerHTML = (60 - seconds) + " seconds until period " + (window.whichDay + 4);
     } else if (hour == 12 && minutes < 25) {
         document.getElementById("time").innerHTML = (25 - minutes) + " minutes until period " + (window.whichDay + 4);
@@ -111,6 +111,8 @@ function startclock15() {
         i.style.display = "none";
     };
 
+    document.getElementById("back-button").innerHTML = "back"
+
     gettime()
 }
 
@@ -122,6 +124,8 @@ function startclock610() {
     for (var i of elements) {
         i.style.display = "none";
     };
+
+    document.getElementById("back-button").innerHTML = "back"
 
     gettime()
 }
@@ -155,4 +159,8 @@ function show() {
 
     gettime()
     clearTimeout(clockloop);
+}
+
+function back() {
+    location.reload()
 }

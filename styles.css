@@ -37,6 +37,7 @@ button {
     font-family: 'Lexend Deca', sans-serif;
     border: none;
     border-radius: 18px;
+    transition: .5s;
 }
 
 button:focus {
@@ -44,7 +45,8 @@ button:focus {
 }
 
 button:hover {
-    cursor: pointer;;
+    cursor: pointer;
+    color: #FFFFFF
 }
 
 h3 {
@@ -54,9 +56,26 @@ h3 {
     cursor: default;
 }
 
+a {
+    transition: .5s;
+}
+
 a:link, a:visited { 
     color: #F7B801;
     text-decoration: none;
+}
+
+a:hover {
+    color: #FFFFFF;
+}
+
+#back-button {
+    transition: .5s;
+}
+
+#back-button:hover {
+    color: #FFFFFF;
+    cursor: pointer;
 }
 
 .bottom {
@@ -75,7 +94,7 @@ a:link, a:visited {
 	animation-name: fadeInOpacity;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in;
-	animation-duration: 1s;
+    animation-duration: 1s;
 }
 
 @keyframes fadeInOpacity {
