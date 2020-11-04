@@ -34,7 +34,7 @@ function gettime() {
         document.getElementById("time").innerHTML = (60 - seconds) + " second until period " + (window.whichDay + 2);
     } else if (hour == 10 && (minutes == 14)) {
         document.getElementById("time").innerHTML = (60 - seconds) + " seconds until period " + (window.whichDay + 2);
-    } else if (hour == 10 && (minutes > 5 && minutes < 14)) {
+    } else if (hour == 10 && (minutes >= 5 && minutes < 14)) {
         document.getElementById("time").innerHTML = (15 - minutes) + " minutes until period " + (window.whichDay + 2);
 
 
