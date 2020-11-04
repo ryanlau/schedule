@@ -133,12 +133,29 @@ function startclock610() {
 function displaytime() {
     var d = new Date();
     console.log('clockloop working')
-    hour = d.getHours()
-    minutes = d.getMinutes()
-    seconds = d.getSeconds()
+
+    if (d.getHours() > 12) {
+        hour = d.getHours() - 12;
+    } else {
+        hour = d.getHours();
+    }
+
+    if (d.getMinutes().toString().length == 1) {
+        minutes = "0" + d.getMinutes();
+    } else {
+        minutes = d.getMinutes();
+    }
+
+    if (d.getSeconds().toString().length == 1) {
+        seconds = "0" + d.getSeconds();
+    } else {
+        seconds = d.getSeconds();
+    }
+
     day = d.getDay()
 
     document.getElementById("clock").innerHTML = hour + ":" + minutes + ":" + seconds;
+
     clockloop = setTimeout(displaytime, 1000)
 }
 
