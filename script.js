@@ -93,7 +93,7 @@ function gettime() {
     } else if (hour == 14 && minutes == 24) {
         document.getElementById("time").innerHTML = (60 - seconds) + " seconds left in period " + (window.whichDay + 5);
     } else if (hour == 14) {
-        document.getElementById("time").innerHTML = (85 - minutes) + " minutes left in period " + (window.whichDay + 5);
+        document.getElementById("time").innerHTML = (25 - minutes) + " minutes left in period " + (window.whichDay + 5);
     } else {
         document.getElementById("time").innerHTML = "Classes over, click for clock";
     }
