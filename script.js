@@ -11,7 +11,7 @@ function gettime() {
     if (day == 0 || day == 6) {
         document.getElementById("time").innerHTML = "It's the weekend, go back to sleep.";
 
-    } else if (0 < hour && hour < 8) {
+    } else if (0 < hour && hour <= 8) {
         document.getElementById("time").innerHTML = ((9 - hour) * 60 + (10 - minutes)) + " minutes until period " + (window.whichDay + 1);
    
     } else if (hour == 9 && minutes == 9 && seconds == 59) {
