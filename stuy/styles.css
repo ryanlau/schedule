@@ -23,6 +23,7 @@
 }
 
 p {
+    display:inline-block;
     margin: 0;
     color: #F7B801;
     font-family: 'Lexend Deca', sans-serif;
@@ -111,4 +112,12 @@ a:hover {
 	100% {
 		opacity: 1;
 	}
+}
+
+.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
