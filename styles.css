@@ -1,0 +1,115 @@
+.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    background: #2A2B2A;
+}
+
+#time {
+    margin: 0;
+}
+
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+p {
+    margin: 0;
+    color: #F7B801;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 36px;
+    cursor: default;
+    padding-bottom: 2%;
+}
+
+button {
+    margin: 0;
+    background-color: #F7B801;
+    color: #2A2B2A;
+    font-size: 36px;
+    font-family: 'Lexend Deca', sans-serif;
+    border: none;
+    border-radius: 18px;
+    transition: .5s;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+    color: #FFFFFF
+}
+
+h3 {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    color: #F7B801;
+    cursor: default;
+}
+
+a {
+    transition: .5s;
+}
+
+a:link, a:visited { 
+    color: #F7B801;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FFFFFF;
+}
+
+#back-button {
+    transition: .5s;
+}
+
+#back-button:hover {
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  cursor: default;
+}
+
+@media screen and (max-height: 170px) {
+    .bottom {
+        display: none;
+    }
+}
+
+/* https://stackoverflow.com/questions/11660710/css-transition-fade-in#39669911 */
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+    animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
