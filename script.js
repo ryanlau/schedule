@@ -125,7 +125,6 @@ function getTimeLeft(schedule) {
             }
         }
     }
-    console.log("hi")
 }
 
 function main(schedule) {
