@@ -76,7 +76,7 @@ function getTimeLeft(schedule) {
     var s = "s"
 
     if (period[0] == 0) {
-        var timeLeft = Math.floor((schedule.start[1] - period[1]) / 60)
+        var timeLeft = Math.ceil((schedule.start[1] - period[1]) / 60)
 
         if (timeLeft < 1) {
             timeLeft = schedule.start[1] - period[1]
@@ -91,7 +91,7 @@ function getTimeLeft(schedule) {
             document.getElementById("display").innerHTML = `${timeLeft} minute${s} until period 1`
         }
     } else if (period.length == 2) {
-        var timeLeft = Math.floor((schedule.end[period[0]] - period[1]) / 60)
+        var timeLeft = Math.ceil((schedule.end[period[0]] - period[1]) / 60)
 
         if (timeLeft < 1) {
             timeLeft = schedule.end[period[0]] - period[1] 
@@ -109,7 +109,7 @@ function getTimeLeft(schedule) {
         if (schedule.start[period[1]] == undefined) {
             document.getElementById("display").innerHTML = "Classes over"
         } else {
-            var timeLeft = Math.floor((schedule.start[period[1]] - period[2]) / 60)
+            var timeLeft = Math.ceil((schedule.start[period[1]] - period[2]) / 60)
 
             if (timeLeft < 1) {
                 timeLeft = schedule.start[period[1]] - period[2]
